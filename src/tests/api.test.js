@@ -7,11 +7,64 @@ jest.mock('mongoose', () => ({
     dropDatabase: jest.fn().mockResolvedValue(true),
     close: jest.fn().mockResolvedValue(true),
     collections: {}
+  },
+  Schema: function(definition) {
+    this.definition = definition;
+    this.pre = jest.fn();
+    this.methods = {};
+    return this;
+  },
+  model: jest.fn().mockReturnValue({
+    find: jest.fn(),
+    findById: jest.fn(),
+    findOne: jest.fn(),
+    create: jest.fn(),
+    findByIdAndUpdate: jest.fn(),
+    findByIdAndDelete: jest.fn()
+  }),
+  Types: {
+    ObjectId: function() {}
   }
 }));
 
+// Add Schema.Types to the mock
+jest.mock('mongoose', () => {
+  const mockSchema = function(definition) {
+    this.definition = definition;
+    this.pre = jest.fn();
+    this.methods = {};
+    this.index = jest.fn();
+    return this;
+  };
+  
+  mockSchema.Types = {
+    ObjectId: function() {}
+  };
+  
+  return {
+    connect: jest.fn().mockResolvedValue(true),
+    connection: {
+      dropDatabase: jest.fn().mockResolvedValue(true),
+      close: jest.fn().mockResolvedValue(true),
+      collections: {}
+    },
+    Schema: mockSchema,
+    model: jest.fn().mockReturnValue({
+      find: jest.fn(),
+      findById: jest.fn(),
+      findOne: jest.fn(),
+      create: jest.fn(),
+      findByIdAndUpdate: jest.fn(),
+      findByIdAndDelete: jest.fn()
+    }),
+    Types: {
+      ObjectId: function() {}
+    }
+  };
+});
+
 // Import app after mocking mongoose
-const app = require('../../../server');
+const app = require('../../server');
 
 describe('API Basic Tests', () => {
   test('should respond to health check', async () => {

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { connectDB, closeDB, clearDB } = require('../utils/database');
+const { connectDB, closeDB, clearDB } = require('./utils/database');
 
 describe('Database Connection Test', () => {
   beforeAll(async () => {

@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const Project = require('../models/Project');
 const Client = require('../models/Client');
 const User = require('../models/User');
@@ -160,6 +161,11 @@ router.post('/', auth, validate(projectSchema), async (req, res) => {
 // @access  Private
 router.put('/:id', auth, validate(projectSchema), async (req, res) => {
   try {
+    // Validate ObjectId format
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ message: 'Invalid ID format' });
+    }
+
     const { client: clientId, teamMembers, ...updateData } = req.body;
 
     // Check if project exists and user has access

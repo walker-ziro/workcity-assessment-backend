@@ -59,6 +59,7 @@ const clientSchema = Joi.object({
     }),
   email: Joi.string()
     .email()
+    .trim()
     .required()
     .messages({
       'string.email': 'Please provide a valid email address',

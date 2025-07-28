@@ -106,6 +106,16 @@ router.post('/', auth, validate(clientSchema), async (req, res) => {
     });
   } catch (error) {
     console.error('Create client error:', error);
+    
+    // Handle duplicate key error (MongoDB error code 11000)
+    if (error.code === 11000) {
+      const field = Object.keys(error.keyValue)[0];
+      return res.status(400).json({ 
+        message: `${field} already exists`,
+        error: 'Validation error'
+      });
+    }
+    
     res.status(500).json({ message: 'Server error while creating client' });
   }
 });
