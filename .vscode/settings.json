@@ -1,0 +1,25 @@
+{
+  "json.schemaDownload.enable": false,
+  "json.validate.enable": true,
+  "files.associations": {
+    "package.json": "json"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true
+  }
+}

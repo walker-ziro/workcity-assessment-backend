@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-vscode.vscode-json",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.js-debug-nightly",
+    "ms-vscode-remote.remote-containers",
+    "humao.rest-client",
+    "mongodb.mongodb-vscode",
+    "ms-vscode.test-adapter-converter"
+  ]
+}
