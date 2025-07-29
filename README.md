@@ -1,6 +1,6 @@
 # WorkCity Assessment Backend
 
-A comprehensive RESTful API built with Node.js, Express, and MongoDB featuring JWT-based authentication, role-based access control, and complete CRUD operations for Clients and Projects. This production-ready API includes extensive testing, security features, and advanced project management capabilities.
+A comprehensive RESTful API built with Node.js, Express, and MongoDB featuring JWT-based authentication, role-based access control, and complete CRUD operations for Clients and Projects. This production-ready API includes extensive testing, security features, and advanced project management capabilities
 
 ## Features
 
@@ -48,7 +48,7 @@ A comprehensive RESTful API built with Node.js, Express, and MongoDB featuring J
 
 ## Installation & Setup
 
-### Prerequisites
+### Prerequisites/Requirements 
 - Node.js (v18 or higher)
 - MongoDB (v5.0 or higher)
 - npm or yarn
@@ -655,7 +655,7 @@ Content-Security-Policy: default-src 'self'
 │ role        │         │ phone       │         │ status      │
 │ isActive    │         │ address     │         │ priority    │
 │ timestamps  │         │ company     │         │ budget      │
-└─────────────┘         │ industry    │         │ startDate   │
+└─────────────┘      │ industry    │         │ startDate   │
                         │ isActive    │         │ endDate     │
                         │ timestamps  │         │ deliverables│
                         └─────────────┘         │ teamMembers │◀──┐
@@ -1068,50 +1068,13 @@ npx jest --clearCache
 # Run tests with verbose output for debugging
 npm test -- --verbose
 ```
-
-### Getting Help
-- **Issues**: Create GitHub issues for bugs or feature requests
-- **Discussions**: Use GitHub Discussions for questions and ideas
-- **Email**: Contact project maintainers for urgent issues
-
-## 📄 License & Legal
-
-This project is licensed under the **MIT License**. This means you are free to:
-- Use the software for any purpose
-- Change the software to suit your needs
-- Share the software with your friends and neighbors
-- Share the changes you make
-
-### MIT License
-```
-Copyright (c) 2024 WorkCity Assessment Backend
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
 ---
 
 ## 📈 Project Status
 
 - **Version**: 1.0.0
 - **Status**: Production Ready ✅
-- **Last Updated**: July 28, 2025
+- **Last Updated**: July 29, 2025
 - **Test Coverage**: 43/43 tests passing (100% pass rate)
 - **Security**: All security best practices implemented
 - **Documentation**: Comprehensive and up-to-date
