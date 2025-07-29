@@ -658,7 +658,7 @@ Content-Security-Policy: default-src 'self'
 └─────────────┘      │ industry    │         │ startDate   │
                         │ isActive    │         │ endDate     │
                         │ timestamps  │         │ deliverables│
-                        └─────────────┘         │ teamMembers │◀──┐
+                        └─────────────┘       │ teamMembers │◀──┐
                                                 │ tags        │   │
                                                 │ createdBy   │   │
                                                 │ isActive    │   │
