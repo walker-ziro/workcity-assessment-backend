@@ -1039,25 +1039,6 @@ RATE_LIMIT_WINDOW_MS=900000                    # Rate limit window (15 min)
 - **Test Data**: Use MongoDB Memory Server for isolated testing
 - **Assertions**: Use descriptive test names and comprehensive assertions
 
-## Additional Resources & Documentation
-
-### API Documentation
-- **Postman Collection**: Available in repository for easy API testing
-- **OpenAPI/Swagger**: Can be integrated for interactive API documentation
-- **Sample Requests**: Comprehensive examples provided in this README
-
-### Learning Resources
-- [Express.js Documentation](https://expressjs.com/)
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Mongoose ODM Guide](https://mongoosejs.com/docs/)
-- [JWT Authentication Guide](https://jwt.io/introduction/)
-- [Jest Testing Framework](https://jestjs.io/docs/getting-started)
-
-### Related Projects
-- **Frontend Repository**: (Link to frontend if exists)
-- **Mobile App**: (Link to mobile app if exists)
-- **Admin Dashboard**: (Link to admin panel if exists)
-
 ## 🆘 Support & Troubleshooting
 
 ### Common Issues & Solutions
